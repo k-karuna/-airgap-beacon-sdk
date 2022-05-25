@@ -136,27 +136,27 @@ const generateForBlockchains = (
     )
   }
 
-  const createToast = async () => {
-    const TOAST_SRC_DIR = path.join(PKG_DIR, 'assets', 'toast')
-    const TOAST_DEST_DIR = path.join(PKG_DIR, 'packages', packagePath, 'src', 'ui', 'toast')
+  // const createToast = async () => {
+  //   const TOAST_SRC_DIR = path.join(PKG_DIR, 'assets', 'toast')
+  //   const TOAST_DEST_DIR = path.join(PKG_DIR, 'packages', packagePath, 'src', 'ui', 'toast')
 
-    const css = (await readFile(path.join(TOAST_SRC_DIR, 'toast.css'))).toString('utf-8')
+  //   const css = (await readFile(path.join(TOAST_SRC_DIR, 'toast.css'))).toString('utf-8')
 
-    const x = {
-      default: {
-        css: css
-      }
-    }
+  //   const x = {
+  //     default: {
+  //       css: css
+  //     }
+  //   }
 
-    writeFile(
-      path.join(TOAST_DEST_DIR, 'toast-templates.ts'),
-      `export const toastTemplates = ${JSON.stringify(x)}`
-    )
-  }
+  //   writeFile(
+  //     path.join(TOAST_DEST_DIR, 'toast-templates.ts'),
+  //     `export const toastTemplates = ${JSON.stringify(x)}`
+  //   )
+  // }
 
   createLists()
   createAlert()
-  createToast()
+  // createToast()
 }
 
 generateForBlockchains(

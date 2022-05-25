@@ -1,6 +1,5 @@
 import { generateGUID } from '@airgap/beacon-utils'
 import { WalletInfo } from '@airgap/beacon-types'
-import { toastTemplates } from './toast-templates'
 import { getColorMode } from '../../utils/colorMode'
 import { createIconSVGExternal, createSanitizedElement } from '../../utils/html-elements'
 import { constructPoweredByBeacon, constructToastContainer } from '../../utils/templates'
@@ -148,7 +147,7 @@ const getToastHTML = (
   const toastContainerEl = constructToastContainer([outerEl])
 
   return {
-    style: toastTemplates.default.css,
+    style: '',
     html: toastContainerEl
   }
 }

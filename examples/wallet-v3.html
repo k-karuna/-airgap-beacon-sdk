@@ -84,6 +84,7 @@
             setStatus('Handling request...')
 
             console.log('message', message)
+            console.warn(`Handling message.version === ${message.version}`)
 
             if (message.version === '3') {
               // Example: Handle PermissionRequest. A wallet should handle all request types
